@@ -64,6 +64,8 @@ let advancedText =
 Чистий прибуток: ${pureProfit}`;
 console.log(advancedText);
 
+document.write(advancedText);
+
 
 
 
