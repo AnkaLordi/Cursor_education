@@ -23,30 +23,30 @@ const truncPriceCheese = Math.trunc(priceCheese);
 const truncSum = truncPriceApple + truncPriceSalo + truncPriceCheese;
 console.log('Сумарна вартість без копійок: ' + truncSum);
 
-const ceilSum = Math.ceil(sum/100)*100; //округлена сума в більшу сторону
+const ceilSum = Math.ceil(sum / 100) * 100; //округлена сума в більшу сторону
 console.log('Округлена сума до сотень у більшу сторону: ' + ceilSum);
 
-const floorSum = Math.floor(sum/100)*100; //округлена сума в меншу сторону
+const floorSum = Math.floor(sum / 100) * 100; //округлена сума в меншу сторону
 console.log('Округлена сума до сотень у меншу сторону: ' + floorSum); 
 
-const checkNumber = Math.floor(floorSum%2 === 0);
+const checkNumber = Math.floor(floorSum % 2 === 0);
 console.log('Чи є округлена сума до сотень у меншу сторону парним числом? ' + checkNumber);
 
 const rest = 500 - sum;
 console.log('Сума решти без округлення, якщо клієнт платить 500 грн.: ' + rest);
 
-const averageSum = Math.ceil((sum/3)*100)/100;
+const averageSum = Math.ceil((sum / 3) * 100) / 100;
 console.log('Середнє значення цін: ' + averageSum);
 
 const min = 5;
 const max = 15;
-const randomDiscount = Math.ceil((max-min)*Math.random() + min);
+const randomDiscount = Math.ceil((max - min) * Math.random() + min);
 console.log('Випадкова знижка становить: ' + randomDiscount);
 
-const finalSum = Math.ceil(((sum*((100-randomDiscount)*0.01))*100))/100;
+const finalSum = Math.ceil(((sum * ((100 - randomDiscount) * 0.01)) * 100)) / 100;
 console.log('Фінальна сума з урахуванням знижки: ' + finalSum);
 
-const pureProfit = Math.ceil((sum/2-(randomDiscount*sum*0.01))*100)/100;
+const pureProfit = Math.ceil((sum / 2 - (randomDiscount * sum * 0.01)) * 100) / 100;
 console.log('Чистий прибуток: ' + pureProfit);
 
 const advancedText = 
