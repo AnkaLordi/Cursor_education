@@ -14,14 +14,14 @@ while (!Number.isInteger(M) || M < N) {
 
 console.log(`Число M` + M); 
 
-let missEven = confirm("Пропускати парні числа в послідовності?");
+let missEven = confirm("Пропускати парні  числа в послідовності?");
 
 let sum = 0;
 
 for (let i = N; i <= M; i++) {
   if (missEven && i % 2 == 0) {
   }
-  sum = +-i;
+  sum +=i;
 }
 
 console.log(sum);
