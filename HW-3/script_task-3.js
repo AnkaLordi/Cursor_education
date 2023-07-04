@@ -15,6 +15,7 @@ function getMaxDigit(number) {
     return maxDigit;
 }
 
+
 /** 
 2. Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл  */
 
@@ -85,11 +86,13 @@ function calcLetter () {
 }
 
 document.writeln (
-    `Функція №1 ${getMaxDigit(24021989)} <br>
-     Функція №2 ${inPow(5, 2)} <br>
-     Функція №3 ${formatName(lArisa)} <br>
-     Функція №4 ${noTaxIncome(30000, 15)} <br>
-     Функція №5 ${getRandomInteger(5, 135)} <br>
-     Функція №6 ${calcLetter(abrakadabra)} <br>
-   `
-   );
+    `Функція №1: ${getMaxDigit(24021989)} <br>
+     Функція №2: ${inPow(5, 2)} <br>
+     Функція №3: ${formatName(`lArisa`)} <br>
+     Функція №4: ${noTaxIncome(30000, 15)} <br>
+     Функція №5: ${getRandomInteger(5, 135)} <br>
+     Функція №6: ${calcLetter(`abrakadabra`)} <br>
+`); 
+
+
+
