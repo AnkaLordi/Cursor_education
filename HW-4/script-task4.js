@@ -33,7 +33,7 @@ console.log('Працюють над темою: ', topics);
 function getMarks(students, marks) {
     const eachMark = [];
     for (let i = 0; i<marks.length; i++) {
-        eachMark.push[students[i], marks[i]]
+        eachMark.push([students[i], marks[i]]);
     }
     return eachMark;
 }
@@ -51,5 +51,5 @@ function pairMark(getTheme) {
     return commonMark;
 }
 
-const commonMark = pairMark(getTheme);
+const commonMark = pairMark(topics);
 console.log('Випадкова оцінка парі від 1 до 5: ', commonMark);
