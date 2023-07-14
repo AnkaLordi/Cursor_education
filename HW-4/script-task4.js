@@ -32,7 +32,7 @@ console.log('Працюють над темою: ', topics);
 //розставити оцінки
 function getMarks(students, marks) {
     const eachMark = [];
-    for (let i = 0; i<marks.length; i++) {
+    for (let i = 0; i < marks.length; i++) {
         eachMark.push([students[i], marks[i]]);
     }
     return eachMark;
@@ -42,14 +42,14 @@ const eachMark = getMarks(students, marks);
 console.log('Оцінка студента: ', eachMark);
 
 //випадкова оцінка парі
-function pairMark(themes) {
+function pairMark(topics) {
     const commonMark = [];
-    for (let i = 0; i < themes.length; i++) {
+    for (let i = 0; i < topics.length; i++) {
         let randomPoint = Math.floor(Math.random() * 5) + 1;
-        commonMark.push([themes[i], randomPoint]);
+        commonMark.push([topics[i], randomPoint]);
     }
     return commonMark;
 }
 
-const commonMark = pairMark(topics);
-console.log('Випадкова оцінка парі від 1 до 5: ', commonMark);
+const randomMark = pairMark(topics);
+console.log('Випадкова оцінка парі від 1 до 5: ', randomMark);
