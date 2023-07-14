@@ -42,11 +42,11 @@ const eachMark = getMarks(students, marks);
 console.log('Оцінка студента: ', eachMark);
 
 //випадкова оцінка парі
-function pairMark(getTheme) {
+function pairMark(themes) {
     const commonMark = [];
-    for (let i = 0; i < getTheme.length; i++) {
+    for (let i = 0; i < themes.length; i++) {
         let randomPoint = Math.floor(Math.random() * 5) + 1;
-        commonMark.push([getTheme[i], randomPoint]);
+        commonMark.push([themes[i], randomPoint]);
     }
     return commonMark;
 }
