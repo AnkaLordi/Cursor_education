@@ -1,54 +1,58 @@
 const students = ["Олександр", "Ігор", "Олена", "Іра", "Олексій", "Світлана"];
-const themes = ["Диференційне рівняння", 
-                "Теорія автоматів", 
-                "Алгоритми і структури даних"];
+const themes = ["Диференційне рівняння", "Теорія автоматів", "Алгоритми і структури даних"];
 const marks = [4, 5, 5, 3, 4, 5];
 
-//розподілити по парах
+// розподілити по парах
 function maleFemale() {
-    const pair = [
-        [students[0], students[2]],
-        [students[1], students[3]],
-        [students[4], students[5]],
-    ];
-    return pair;
+  const males = [students[0], students[1], students[4]];
+  const females = [students[2], students[3], students[5]];
+  const pairs = [];
+  for (let i = 0; i < males.length; i++) {
+    pairs.push([males[i], females[i]]);
+  }
+  return pairs;
 }
 
-const pair = maleFemale();
-console.log('Розділіть студентів на пари (хлопець + дівчина): ', maleFemale());
+const pairs = maleFemale();
+console.log('Розділіть студентів на пари (хлопець + дівчина): ', pairs);
 
-//розподілити по темах
-function getTheme(themes, pair) {
-    const topics = [];
-    for (let i = 0; i < themes.length; i++) {
-        topics.push(pair[i].concat(themes[i]))
-    }
-    return topics;
+// розподілити по темах
+function getTheme(pairs, themes) {
+  const topics = [];
+  for (let i = 0; i < themes.length; i++) {
+    const pair = pairs[i];
+    const theme = themes[i];
+    topics.push(pair.concat(theme));
+  }
+  return topics;
 }
 
-const topics = getTheme(themes, pair);
+const topics = getTheme(pairs, themes);
 console.log('Працюють над темою: ', topics);
 
-//розставити оцінки
+// розставити оцінки
 function getMarks(students, marks) {
-    const eachMark = [];
-    for (let i = 0; i < marks.length; i++) {
-        eachMark.push([students[i], marks[i]]);
-    }
-    return eachMark;
+  const eachMark = [];
+  for (let i = 0; i < marks.length; i++) {
+    const student = students[i];
+    const mark = marks[i];
+    eachMark.push([student, mark]);
+  }
+  return eachMark;
 }
 
 const eachMark = getMarks(students, marks);
 console.log('Оцінка студента: ', eachMark);
 
-//випадкова оцінка парі
+// випадкова оцінка парі
 function pairMark(topics) {
-    const commonMark = [];
-    for (let i = 0; i < topics.length; i++) {
-        let randomPoint = Math.floor(Math.random() * 5) + 1;
-        commonMark.push([topics[i], randomPoint]);
-    }
-    return commonMark;
+  const randomMark = [];
+  for (let i = 0; i < topics.length; i++) {
+    const topic = topics[i];
+    const randomPoint = Math.floor(Math.random() * 5) + 1;
+    randomMark.push(topic.concat(randomPoint));
+  }
+  return randomMark;
 }
 
 const randomMark = pairMark(topics);
