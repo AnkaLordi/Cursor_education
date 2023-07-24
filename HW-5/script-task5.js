@@ -149,7 +149,7 @@ function countPositiveNumbers_new(numbers6_new) {
     return false;
   });
 
-  return res_ex6;
+  return count;
 }
 
 const arr_6 = [1, -2, 3, -4, -5, 6];
