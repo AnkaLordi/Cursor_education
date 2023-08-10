@@ -118,8 +118,10 @@ const text = prompt('Введіть досліджуване слово');
 function calculateWordLetters(text) {
     const calc = {};
 
-    for (let i = 0; i < text.length; i++) {
-        const letter = text[i];
+    const lowerCase = text.toLowerCase();
+
+    for (let i = 0; i < lowerCase.length; i++) {
+        const letter = lowerCase[i];
 
         if (calc[letter]) {
             calc[letter]++
